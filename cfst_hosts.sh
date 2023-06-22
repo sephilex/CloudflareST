@@ -33,7 +33,7 @@ _UPDATE() {
 
 	# 这里可以自己添加、修改 CloudflareST 的运行参数
 #	./CloudflareST -o "result_hosts.txt"
-        ./CloudflareST -n 100 -f 1.txt -tl 40 -dd -o "result_hosts.txt"
+        ./CloudflareST -n 100 -f 1.txt -tl 80 -tlr 0 -dd -o "result_hosts.txt"
 
 	# 如果需要 "找不到满足条件的 IP 就一直循环测速下去"，那么可以将下面的两个 exit 0 改为 _UPDATE 即可
 	[[ ! -e "result_hosts.txt" ]] && echo "CloudflareST 测速结果 IP 数量为 0，跳过下面步骤..." && _UPDATE
